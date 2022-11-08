@@ -41,6 +41,8 @@ public class MainApplication {
          * 4。这里的实体类是被Spring CGLIB增强后的，获取到的对象本就是代理对象，前提是@Configuration(proxyBeanMethods = true)
          * 此时SpringBoot总会检查这个组件是否在容器中存在，如果在容器中则进行直接调用，如果不在容器中则会重新创建对象
          * 换而言之，SpringBoot总会保持组件单例
+         *
+         * 如果@Configuration(proxyBeanMethods = false)，此时对象不再被Spring CGLIB增强，
          */
 
         MyConfig myConfig = run.getBean(MyConfig.class);
