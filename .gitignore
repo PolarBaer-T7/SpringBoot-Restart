@@ -103,6 +103,7 @@ fabric.properties
 .idea
 *.iml
 out
+target
 gen
 ### Redis template
 # Ignore redis binary dump (dump.rdb) files
